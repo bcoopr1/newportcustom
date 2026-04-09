@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story — Newport Custom</title>
+  <meta name="description" content="The Newport Custom story — how a love of coastal living became a clothing brand committed to natural fibres, transparent sourcing, and handcrafted quality." />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Our Story — Newport Custom" />
+  <meta property="og:description" content="A clothing brand born from a love of the California coast and a commitment to quality that lasts." />
+  <meta property="og:image"       content="/images/og-about.webp" />
+  <meta property="og:url"         content="https://newportcustom.com/about.html" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="canonical" href="https://newportcustom.com/about.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+
+  <style>
+    .about-hero {
+      padding-top: calc(var(--nav-height) + clamp(3rem, 6vw, 5rem));
+      padding-bottom: clamp(2rem, 4vw, 3.5rem);
+      background: var(--c-navy);
+      color: var(--c-white);
+    }
+    .about-hero .label { color: rgba(255,255,255,0.55); margin-bottom: var(--space-5); }
+    .about-hero h1 { color: var(--c-white); font-size: clamp(3rem, 7vw, 6rem); }
+
+    .about-lead {
+      padding-block: clamp(4rem, 8vw, 7rem);
+    }
+    .about-lead p {
+      font-family: var(--font-serif);
+      font-size: clamp(1.25rem, 2.5vw, 2rem);
+      font-weight: 300;
+      line-height: 1.5;
+      color: var(--c-text);
+      max-width: 28ch;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-10) var(--space-8);
+      padding-block: clamp(4rem, 8vw, 6rem);
+    }
+    .value-item h3 {
+      font-size: 1.25rem;
+      font-weight: 300;
+      margin-bottom: var(--space-3);
+    }
+    .value-item p {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+    .value-num {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      font-weight: 200;
+      color: var(--c-sand-dark);
+      margin-bottom: var(--space-4);
+      display: block;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-10);
+      padding-block: clamp(3rem, 6vw, 5rem);
+    }
+    .team-member__img {
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 3px;
+      background: var(--c-sand);
+      margin-bottom: var(--space-4);
+      width: 100%;
+    }
+    .team-member__name {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 300;
+      margin-bottom: var(--space-1);
+    }
+    .team-member__role {
+      font-size: 0.8125rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--c-text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header role="banner">
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo" style="color:var(--c-white)" aria-label="Newport Custom — Home">Newport Custom</a>
+          <ul class="nav__links" role="list">
+            <li><a href="index.html"    class="nav__link" style="color:var(--c-white)">Home</a></li>
+            <li><a href="products.html" class="nav__link" style="color:var(--c-white)">Collection</a></li>
+            <li><a href="about.html"    class="nav__link active" style="color:var(--c-white)" aria-current="page">About</a></li>
+            <li><a href="contact.html"  class="nav__link" style="color:var(--c-white)">Contact</a></li>
+          </ul>
+          <div class="nav__actions">
+            <button class="nav__cart-btn" id="cart-toggle" aria-label="Open cart, 0 items" aria-expanded="false" aria-controls="cart-drawer" style="color:var(--c-white);border-color:rgba(255,255,255,0.3)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+              Bag
+              <span class="nav__cart-count" id="cart-count" aria-live="polite">0</span>
+            </button>
+            <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+              <span style="background:var(--c-white)"></span>
+              <span style="background:var(--c-white)"></span>
+              <span style="background:var(--c-white)"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="nav__mobile" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="index.html"    class="nav__mobile-link">Home</a>
+      <a href="products.html" class="nav__mobile-link">Collection</a>
+      <a href="about.html"    class="nav__mobile-link">About</a>
+      <a href="contact.html"  class="nav__mobile-link">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="about-hero" aria-label="About Newport Custom">
+      <div class="container">
+        <span class="label">Est. 2021 · Newport Beach, CA</span>
+        <h1>Made for<br /><em>living well.</em></h1>
+      </div>
+    </section>
+
+    <!-- Lead quote -->
+    <section class="about-lead section--white" aria-label="Brand philosophy">
+      <div class="container" data-reveal>
+        <p>
+          "We believe the best clothes are the ones you reach for every day —
+          effortless in the morning, still beautiful at dusk."
+        </p>
+      </div>
+    </section>
+
+    <!-- Editorial split - Story -->
+    <section class="editorial section--cream" aria-labelledby="brand-story-title">
+      <div class="editorial__media">
+        <img
+          class="editorial__media-img"
+          src="images/about-studio.webp"
+          alt="The Newport Custom atelier — a sun-lit studio workspace in Newport Beach"
+          loading="lazy"
+        />
+      </div>
+      <div class="editorial__content" data-reveal>
+        <span class="label">The Beginning</span>
+        <h2 id="brand-story-title">Born from<br /><em>a morning walk.</em></h2>
+        <p>
+          Newport Custom started in 2021 with a simple frustration: why was it so
+          hard to find clothes that felt as relaxed as a Saturday morning on the
+          Balboa Peninsula, but looked polished enough for a client dinner?
+        </p>
+        <p>
+          Founder Mara Ellison spent two years working with mills in Como, Brittany,
+          and Osaka before producing the first twelve pieces. Everything sold out
+          in three days.
+        </p>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section section--white" aria-labelledby="values-title" id="sustainability">
+      <div class="container">
+        <header class="section__header" data-reveal>
+          <span class="label section__eyebrow">What we stand for</span>
+          <h2 id="values-title">Our values</h2>
+        </header>
+
+        <div class="values-grid" data-reveal-stagger>
+          <div class="value-item">
+            <span class="value-num">01</span>
+            <h3>Material honesty</h3>
+            <p>Only natural fibres — linen, silk, cotton, and wool. Each fabric is traceable from mill to garment. We publish our supplier list annually.</p>
+          </div>
+          <div class="value-item">
+            <span class="value-num">02</span>
+            <h3>Slow production</h3>
+            <p>We produce two collections per year, in limited quantities. No overstock, no clearance sales, no race to the bottom on price or quality.</p>
+          </div>
+          <div class="value-item">
+            <span class="value-num">03</span>
+            <h3>Local finishing</h3>
+            <p>Every garment is hand-finished in our Newport Beach atelier — hand-stitched buttons, French seams on fine fabrics, quality checked by a person, not a machine.</p>
+          </div>
+          <div class="value-item">
+            <span class="value-num">04</span>
+            <h3>Longevity</h3>
+            <p>We offer free repairs for the life of every garment. If a button falls off or a seam opens, bring it in. We'd rather fix it than have you replace it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section section--cream" aria-labelledby="team-title">
+      <div class="container">
+        <header class="section__header section__header--centered" data-reveal>
+          <span class="label section__eyebrow">The people</span>
+          <h2 id="team-title">Behind the brand</h2>
+        </header>
+
+        <div class="team-grid">
+          <div class="team-member" data-reveal>
+            <img class="team-member__img" src="images/team-mara.webp" alt="Mara Ellison, founder of Newport Custom" loading="lazy" />
+            <p class="team-member__name">Mara Ellison</p>
+            <p class="team-member__role">Founder & Creative Director</p>
+          </div>
+          <div class="team-member" data-reveal>
+            <img class="team-member__img" src="images/team-leo.webp" alt="Leo Vargas, head of production" loading="lazy" />
+            <p class="team-member__name">Leo Vargas</p>
+            <p class="team-member__role">Head of Production</p>
+          </div>
+          <div class="team-member" data-reveal>
+            <img class="team-member__img" src="images/team-suki.webp" alt="Suki Tanaka, textile consultant" loading="lazy" />
+            <p class="team-member__name">Suki Tanaka</p>
+            <p class="team-member__role">Textile Consultant</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--navy" aria-label="Shop prompt" style="text-align:center;">
+      <div class="container" data-reveal>
+        <span class="label" style="color:rgba(255,255,255,0.5);margin-bottom:var(--space-5);display:block">Ready to shop?</span>
+        <h2 style="color:var(--c-white);margin-bottom:var(--space-8);">Explore the SS 2026 collection</h2>
+        <a href="products.html" class="btn btn--primary">Shop Now</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__brand-name">Newport Custom</p>
+          <p class="footer__brand-desc">Coastal fine clothing, handfinished in Newport Beach, California.</p>
+        </div>
+        <nav aria-label="Shop links">
+          <p class="footer__col-title">Shop</p>
+          <a href="products.html" class="footer__link">New Arrivals</a>
+          <a href="products.html?category=tops" class="footer__link">Tops</a>
+          <a href="products.html?category=dresses" class="footer__link">Dresses</a>
+        </nav>
+        <nav aria-label="Company links">
+          <p class="footer__col-title">Company</p>
+          <a href="about.html" class="footer__link">Our Story</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </nav>
+        <nav aria-label="Help links">
+          <p class="footer__col-title">Help</p>
+          <a href="#" class="footer__link">Sizing Guide</a>
+          <a href="#" class="footer__link">Shipping & Returns</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Newport Custom.</p>
+        <nav class="footer__legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-drawer__header">
+      <h2 class="cart-drawer__title">Your Bag</h2>
+      <button class="cart-drawer__close" id="cart-close" aria-label="Close cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-drawer__body" id="cart-body"></div>
+    <div class="cart-drawer__footer" id="cart-footer" style="display:none;">
+      <div class="cart-subtotal">
+        <span class="cart-subtotal__label">Subtotal</span>
+        <span class="cart-subtotal__value" id="cart-subtotal">$0</span>
+      </div>
+      <button class="btn btn--dark cart-checkout-btn" id="checkout-btn">Checkout <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      <p class="cart-note">Free shipping on orders over $200 · Secure checkout via Stripe</p>
+    </div>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/cart.js"            defer></script>
+  <script src="js/stripe-checkout.js" defer></script>
+  <script src="js/animations.js"      defer></script>
+  <script src="js/main.js"            defer></script>
+</body>
+</html>

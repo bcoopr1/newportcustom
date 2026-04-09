@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Newport Custom</title>
+  <meta name="description" content="Get in touch with Newport Custom. Visit our Newport Beach studio, email us, or connect for press and wholesale enquiries." />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Contact — Newport Custom" />
+  <meta property="og:description" content="Visit our Newport Beach studio or reach us by email." />
+  <meta property="og:image"       content="/images/og-contact.webp" />
+  <meta property="og:url"         content="https://newportcustom.com/contact.html" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="canonical" href="https://newportcustom.com/contact.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+
+  <style>
+    .contact-hero {
+      padding-top: calc(var(--nav-height) + clamp(3rem, 6vw, 5rem));
+      padding-bottom: clamp(2rem, 4vw, 3.5rem);
+      background: var(--c-cream);
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: var(--space-16);
+      padding-block: clamp(4rem, 8vw, 6rem);
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .contact-layout { grid-template-columns: 1fr; gap: var(--space-10); }
+    }
+
+    .contact-info h2 {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      margin-bottom: var(--space-6);
+    }
+
+    .contact-detail {
+      margin-bottom: var(--space-8);
+    }
+    .contact-detail .label {
+      display: block;
+      margin-bottom: var(--space-2);
+    }
+    .contact-detail p, .contact-detail a {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--c-text);
+      max-width: none;
+    }
+    .contact-detail a:hover { text-decoration: underline; }
+
+    .contact-hours dt {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--c-text-muted);
+    }
+    .contact-hours dd {
+      margin: 0 0 var(--space-2) 0;
+      font-size: 0.9375rem;
+      color: var(--c-text);
+    }
+
+    /* Contact form */
+    .contact-form {
+      background: var(--c-white);
+      border: 1px solid var(--c-border);
+      border-radius: 4px;
+      padding: clamp(2rem, 4vw, 3rem);
+    }
+
+    .contact-form h2 {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-6);
+    }
+
+    .form-group {
+      margin-bottom: var(--space-5);
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--c-text-muted);
+      margin-bottom: var(--space-2);
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      color: var(--c-text);
+      background: var(--c-off-white);
+      border: 1px solid var(--c-border);
+      border-radius: 2px;
+      outline: none;
+      transition: border-color var(--dur-fast) ease;
+      appearance: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--c-navy);
+      background: var(--c-white);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 140px;
+      line-height: 1.6;
+    }
+
+    .form-select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236A6A6A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+      cursor: pointer;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: var(--space-10) 0;
+    }
+    .form-success.show { display: block; }
+    .form-success h3 {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 300;
+      margin-bottom: var(--space-3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header role="banner">
+    <nav class="nav nav--scrolled" id="nav" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo" aria-label="Newport Custom — Home">Newport Custom</a>
+          <ul class="nav__links" role="list">
+            <li><a href="index.html"    class="nav__link">Home</a></li>
+            <li><a href="products.html" class="nav__link">Collection</a></li>
+            <li><a href="about.html"    class="nav__link">About</a></li>
+            <li><a href="contact.html"  class="nav__link active" aria-current="page">Contact</a></li>
+          </ul>
+          <div class="nav__actions">
+            <button class="nav__cart-btn" id="cart-toggle" aria-label="Open cart, 0 items" aria-expanded="false" aria-controls="cart-drawer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+              Bag
+              <span class="nav__cart-count" id="cart-count" aria-live="polite">0</span>
+            </button>
+            <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="nav__mobile" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="index.html"    class="nav__mobile-link">Home</a>
+      <a href="products.html" class="nav__mobile-link">Collection</a>
+      <a href="about.html"    class="nav__mobile-link">About</a>
+      <a href="contact.html"  class="nav__mobile-link">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Page header -->
+    <section class="contact-hero" aria-label="Contact header">
+      <div class="container">
+        <span class="label" style="display:block;margin-bottom:var(--space-3);">Reach us</span>
+        <h1>Get in touch</h1>
+      </div>
+    </section>
+
+    <!-- Contact layout -->
+    <section class="section section--white" aria-label="Contact details and form">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- Left: info -->
+          <div data-reveal>
+            <div class="contact-detail">
+              <span class="label">Studio Address</span>
+              <address style="font-style:normal">
+                <p>Newport Custom Atelier</p>
+                <p>320 Marine Avenue</p>
+                <p>Newport Beach, CA 92662</p>
+              </address>
+            </div>
+
+            <div class="contact-detail">
+              <span class="label">Email</span>
+              <a href="mailto:hello@newportcustom.com">hello@newportcustom.com</a>
+            </div>
+
+            <div class="contact-detail">
+              <span class="label">Phone</span>
+              <a href="tel:+19495550182">(949) 555-0182</a>
+            </div>
+
+            <div class="contact-detail">
+              <span class="label">Studio Hours</span>
+              <dl class="contact-hours">
+                <dt>Monday – Friday</dt>
+                <dd>10:00 am – 5:00 pm PST</dd>
+                <dt>Saturday</dt>
+                <dd>11:00 am – 4:00 pm PST</dd>
+                <dt>Sunday</dt>
+                <dd>Closed</dd>
+              </dl>
+            </div>
+
+            <div class="contact-detail" id="press">
+              <span class="label">Press & Wholesale</span>
+              <p>
+                For editorial requests, press samples, and wholesale
+                enquiries please email
+                <a href="mailto:press@newportcustom.com">press@newportcustom.com</a>.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: form -->
+          <div class="contact-form" data-reveal>
+            <h2>Send us a message</h2>
+
+            <div class="form-success" id="form-success" aria-live="polite">
+              <h3>Thank you.</h3>
+              <p class="text-muted">We'll get back to you within one business day.</p>
+            </div>
+
+            <form id="contact-form" action="#" method="post" novalidate aria-label="Contact form">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Your name</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  class="form-input"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                  placeholder="First and last name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email address</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  class="form-input"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subject</label>
+                <select id="contact-subject" name="subject" class="form-select" required aria-required="true">
+                  <option value="" disabled selected>Select a topic</option>
+                  <option value="order">Order enquiry</option>
+                  <option value="sizing">Sizing advice</option>
+                  <option value="returns">Returns & exchanges</option>
+                  <option value="press">Press & wholesale</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Message</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="form-textarea"
+                  required
+                  aria-required="true"
+                  placeholder="Tell us how we can help…"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--dark" style="width:100%;justify-content:center;">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__brand-name">Newport Custom</p>
+          <p class="footer__brand-desc">Coastal fine clothing, handfinished in Newport Beach, California.</p>
+        </div>
+        <nav aria-label="Shop links">
+          <p class="footer__col-title">Shop</p>
+          <a href="products.html" class="footer__link">New Arrivals</a>
+          <a href="products.html?category=tops" class="footer__link">Tops</a>
+        </nav>
+        <nav aria-label="Company links">
+          <p class="footer__col-title">Company</p>
+          <a href="about.html" class="footer__link">Our Story</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </nav>
+        <nav aria-label="Help links">
+          <p class="footer__col-title">Help</p>
+          <a href="#" class="footer__link">Sizing Guide</a>
+          <a href="#" class="footer__link">Shipping & Returns</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Newport Custom.</p>
+        <nav class="footer__legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-drawer__header">
+      <h2 class="cart-drawer__title">Your Bag</h2>
+      <button class="cart-drawer__close" id="cart-close" aria-label="Close cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-drawer__body" id="cart-body"></div>
+    <div class="cart-drawer__footer" id="cart-footer" style="display:none;">
+      <div class="cart-subtotal">
+        <span class="cart-subtotal__label">Subtotal</span>
+        <span class="cart-subtotal__value" id="cart-subtotal">$0</span>
+      </div>
+      <button class="btn btn--dark cart-checkout-btn" id="checkout-btn">Checkout</button>
+      <p class="cart-note">Free shipping on orders over $200 · Secure checkout via Stripe</p>
+    </div>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/cart.js"            defer></script>
+  <script src="js/stripe-checkout.js" defer></script>
+  <script src="js/animations.js"      defer></script>
+  <script src="js/main.js"            defer></script>
+
+  <script>
+    // Contact form handler
+    document.addEventListener('DOMContentLoaded', function () {
+      const form    = document.getElementById('contact-form');
+      const success = document.getElementById('form-success');
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        // TODO: wire to your backend / Formspree / Netlify Forms
+        form.style.display = 'none';
+        success.classList.add('show');
+      });
+    });
+  </script>
+</body>
+</html>

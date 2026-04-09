@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Confirmed — Newport Custom</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;1,9..144,200&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100svh;
+      background: var(--c-cream);
+    }
+    .success-page {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-16) var(--gutter);
+      text-align: center;
+    }
+    .success-icon {
+      width: 64px;
+      height: 64px;
+      border: 1.5px solid var(--c-navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-8);
+      animation: scaleIn 0.6s cubic-bezier(0.16,1,0.3,1) forwards;
+    }
+    @keyframes scaleIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to   { transform: scale(1);   opacity: 1; }
+    }
+    .success-content h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: var(--space-4);
+    }
+    .success-content p {
+      font-size: 1.0625rem;
+      margin-inline: auto;
+      margin-bottom: var(--space-6);
+      text-align: center;
+    }
+    .success-actions {
+      display: flex;
+      gap: var(--space-4);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: var(--space-8);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="nav nav--scrolled" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo" aria-label="Newport Custom — Home">Newport Custom</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="success-page" id="main-content">
+    <div class="success-content">
+      <div class="success-icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--c-navy)" stroke-width="1.5">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+
+      <h1>Order confirmed.</h1>
+      <p>
+        Thank you for your order. A confirmation email is on its way.
+        We'll notify you when your pieces ship.
+      </p>
+      <p style="font-size:0.9rem;">
+        Questions? Email us at
+        <a href="mailto:hello@newportcustom.com" style="color:var(--c-navy);text-decoration:underline;">hello@newportcustom.com</a>
+      </p>
+
+      <div class="success-actions">
+        <a href="index.html"    class="btn btn--dark">Return Home</a>
+        <a href="products.html" class="btn btn--outline">Continue Shopping</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Clear the cart after a successful checkout
+    try { localStorage.removeItem('nc_cart_v1'); } catch {}
+  </script>
+</body>
+</html>

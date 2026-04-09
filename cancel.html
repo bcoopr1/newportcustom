@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout Cancelled — Newport Custom</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;1,9..144,200&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100svh;
+      background: var(--c-off-white);
+    }
+    .cancel-page {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-16) var(--gutter);
+      text-align: center;
+    }
+    .cancel-content h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: var(--space-4);
+    }
+    .cancel-content p {
+      font-size: 1.0625rem;
+      margin-inline: auto;
+      margin-bottom: var(--space-6);
+      text-align: center;
+    }
+    .cancel-actions {
+      display: flex;
+      gap: var(--space-4);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: var(--space-8);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="nav nav--scrolled" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo" aria-label="Newport Custom — Home">Newport Custom</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="cancel-page" id="main-content">
+    <div class="cancel-content">
+      <p class="label" style="margin-bottom:var(--space-5);">Checkout cancelled</p>
+      <h1>No worries.</h1>
+      <p>
+        Your bag is still saved. Head back whenever you're ready —
+        your items are waiting for you.
+      </p>
+
+      <div class="cancel-actions">
+        <a href="products.html" class="btn btn--dark">Return to Collection</a>
+        <a href="index.html"    class="btn btn--outline">Go Home</a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newport Custom — Coastal Fine Clothing</title>
+  <meta name="description" content="Newport Custom crafts elevated essentials for coastal living — refined linen, silk, and natural-fibre clothing designed for the Southern California lifestyle." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Newport Custom — Coastal Fine Clothing" />
+  <meta property="og:description" content="Elevated essentials for coastal living. Premium linen, silk, and natural-fibre clothing designed for the Southern California lifestyle." />
+  <meta property="og:image"       content="/images/og-home.webp" />
+  <meta property="og:url"         content="https://newportcustom.com/" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://newportcustom.com/" />
+
+  <!-- Fonts: Fraunces (serif) + Inter (sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════════ -->
+  <header role="banner">
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <!-- Logo -->
+          <a href="index.html" class="nav__logo" aria-label="Newport Custom — Home">
+            Newport Custom
+          </a>
+
+          <!-- Desktop links -->
+          <ul class="nav__links" role="list">
+            <li><a href="index.html"    class="nav__link active" aria-current="page">Home</a></li>
+            <li><a href="products.html" class="nav__link">Collection</a></li>
+            <li><a href="about.html"    class="nav__link">About</a></li>
+            <li><a href="contact.html"  class="nav__link">Contact</a></li>
+          </ul>
+
+          <!-- Actions -->
+          <div class="nav__actions">
+            <button
+              class="nav__cart-btn"
+              id="cart-toggle"
+              aria-label="Open cart, 0 items"
+              aria-expanded="false"
+              aria-controls="cart-drawer"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+              Bag
+              <span class="nav__cart-count" id="cart-count" aria-live="polite">0</span>
+            </button>
+
+            <!-- Hamburger (mobile) -->
+            <button
+              class="nav__hamburger"
+              id="hamburger"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobile-nav"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile nav overlay -->
+    <nav class="nav__mobile" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="index.html"    class="nav__mobile-link">Home</a>
+      <a href="products.html" class="nav__mobile-link">Collection</a>
+      <a href="about.html"    class="nav__mobile-link">About</a>
+      <a href="contact.html"  class="nav__mobile-link">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="hero" aria-label="Hero — Newport Custom">
+      <!-- Parallax background image -->
+      <div class="hero__bg" id="hero-bg">
+        <img
+          class="hero__bg-img"
+          src="images/hero-bg.webp"
+          alt=""
+          role="presentation"
+          fetchpriority="high"
+          id="hero-parallax-img"
+        />
+      </div>
+
+      <!-- Gradient overlay -->
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <!-- Content -->
+      <div class="container">
+        <div class="hero__content">
+          <p class="label hero__label" data-hero-el>Newport Beach, California</p>
+
+          <h1 class="hero__title" data-hero-el>
+            Dressed<br />
+            for the<br />
+            <em>shore.</em>
+          </h1>
+
+          <p class="hero__sub" data-hero-el>
+            Refined essentials for coastal living — crafted from European linens,
+            Japanese silks, and natural fibres that move the way you do.
+          </p>
+
+          <div class="hero__cta" data-hero-el>
+            <a href="products.html" class="btn btn--primary">Shop the Collection</a>
+            <a href="about.html"    class="btn btn--outline-light">Our Story</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll hint -->
+      <span class="hero__scroll" aria-hidden="true">Scroll</span>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         MARQUEE TICKER
+    ═══════════════════════════════════════════════════════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <!-- Items duplicated for seamless loop -->
+        <span class="marquee__item">New Arrivals</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">European Linen</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Japanese Silk</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Sustainable Craft</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">SS 2026</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Newport Beach</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Free Shipping over $200</span>
+        <span class="marquee__dot">◆</span>
+        <!-- Duplicate for loop -->
+        <span class="marquee__item">New Arrivals</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">European Linen</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Japanese Silk</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Sustainable Craft</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">SS 2026</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Newport Beach</span>
+        <span class="marquee__dot">◆</span>
+        <span class="marquee__item">Free Shipping over $200</span>
+        <span class="marquee__dot">◆</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         FEATURED PRODUCTS
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="section section--white" id="featured" aria-labelledby="featured-title">
+      <div class="container">
+        <header class="section__header section__header--centered" data-reveal>
+          <span class="label section__eyebrow">The Edit</span>
+          <h2 class="section__title" id="featured-title">New This Season</h2>
+          <p class="section__lead">
+            Each piece is chosen for its material integrity, generous silhouette,
+            and ability to live gracefully in your wardrobe for years.
+          </p>
+        </header>
+
+        <!-- Product grid — rendered by JS from products.json -->
+        <div class="products-grid" id="featured-grid" data-reveal-stagger aria-label="Featured products">
+          <!-- JS populates this -->
+        </div>
+
+        <div style="text-align:center; margin-top: var(--space-12);" data-reveal>
+          <a href="products.html" class="btn btn--outline">View Full Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         EDITORIAL — BRAND STORY
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="editorial section--cream" aria-labelledby="story-title">
+      <!-- Image side -->
+      <div class="editorial__media">
+        <img
+          class="editorial__media-img"
+          src="images/editorial-1.webp"
+          alt="A model wearing the Montage Linen Shirt against a sun-drenched Newport Beach backdrop"
+          loading="lazy"
+          id="editorial-parallax-1"
+        />
+      </div>
+
+      <!-- Text side -->
+      <div class="editorial__content" data-reveal>
+        <span class="label">Our Philosophy</span>
+        <h2 id="story-title">
+          Made for the<br />
+          <em>long weekend.</em>
+        </h2>
+        <p>
+          Newport Custom was born from a single belief: that your clothes should
+          feel as effortless as a coastal morning. We work directly with heritage
+          mills in Italy, France, and Japan — sourcing only natural fibres with
+          transparent provenance.
+        </p>
+        <p>
+          Every garment is finished by hand in our Newport Beach atelier,
+          where attention to detail is not a selling point — it's simply
+          how things are done.
+        </p>
+        <a href="about.html" class="btn btn--outline">Read Our Story</a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         EDITORIAL — REVERSED (image right)
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="editorial editorial--reverse section--white" aria-labelledby="craft-title">
+      <div class="editorial__media">
+        <img
+          class="editorial__media-img"
+          src="images/editorial-2.webp"
+          alt="Close-up of stonewashed linen fabric texture, warm afternoon light"
+          loading="lazy"
+          id="editorial-parallax-2"
+        />
+      </div>
+
+      <div class="editorial__content" data-reveal>
+        <span class="label">Material Integrity</span>
+        <h2 id="craft-title">
+          Fabric that<br />
+          <em>breathes.</em>
+        </h2>
+        <p>
+          We begin with the cloth. Our European stonewashed linens soften with
+          every wear, while our 22mm silk charmeuse drapes with an almost
+          imperceptible weight. Nothing synthetic. Nothing that won't age beautifully.
+        </p>
+        <a href="products.html" class="btn btn--outline">Shop Linens & Silks</a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         FULL-WIDTH PARALLAX FEATURE
+    ═══════════════════════════════════════════════════════════ -->
+    <section
+      class="section"
+      style="
+        position: relative;
+        overflow: hidden;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        background: var(--c-navy);
+      "
+      aria-label="Campaign feature"
+    >
+      <!-- Parallax bg -->
+      <div
+        id="feature-bg"
+        style="
+          position: absolute;
+          inset: -25%;
+          z-index: 0;
+        "
+      >
+        <img
+          src="images/feature-bg.webp"
+          alt=""
+          role="presentation"
+          loading="lazy"
+          id="feature-parallax-img"
+          style="width:100%;height:100%;object-fit:cover;opacity:0.55;will-change:transform;"
+        />
+      </div>
+
+      <div class="container" style="position:relative;z-index:1;text-align:center;">
+        <div data-reveal>
+          <p class="label" style="color:rgba(255,255,255,0.6);margin-bottom:var(--space-5);">Summer 2026 Campaign</p>
+          <h2 style="color:var(--c-white);font-size:clamp(2.5rem,6vw,5rem);margin-bottom:var(--space-8);max-width:16ch;margin-inline:auto;">
+            Where the ocean<br /><em>sets the tone.</em>
+          </h2>
+          <a href="products.html" class="btn btn--primary">Explore the Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         NEWSLETTER
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="section section--cream newsletter" aria-labelledby="newsletter-title">
+      <div class="container">
+        <div data-reveal>
+          <span class="label section__eyebrow" style="display:block;margin-bottom:var(--space-4);">Stay in the loop</span>
+          <h2 id="newsletter-title">Early access & new arrivals</h2>
+          <p>
+            Be first to know about new pieces, limited runs, and events at
+            our Newport Beach studio.
+          </p>
+
+          <form class="newsletter__form" action="#" method="post" aria-label="Newsletter signup">
+            <label for="newsletter-email" class="sr-only">Your email address</label>
+            <input
+              type="email"
+              id="newsletter-email"
+              name="email"
+              class="newsletter__input"
+              placeholder="your@email.com"
+              autocomplete="email"
+              required
+              aria-required="true"
+            />
+            <button type="submit" class="btn btn--dark">Subscribe</button>
+          </form>
+
+          <p style="font-size:0.75rem;color:var(--c-text-muted);margin-top:var(--space-3);text-align:center;">
+            No spam, ever. Unsubscribe at any time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <!-- Brand -->
+        <div>
+          <p class="footer__brand-name">Newport Custom</p>
+          <p class="footer__brand-desc">
+            Coastal fine clothing, handfinished in Newport Beach, California.
+            Crafted for a life lived close to the water.
+          </p>
+        </div>
+
+        <!-- Shop -->
+        <nav aria-label="Shop links">
+          <p class="footer__col-title">Shop</p>
+          <a href="products.html" class="footer__link">New Arrivals</a>
+          <a href="products.html?category=tops" class="footer__link">Tops</a>
+          <a href="products.html?category=bottoms" class="footer__link">Bottoms</a>
+          <a href="products.html?category=dresses" class="footer__link">Dresses</a>
+          <a href="products.html?category=accessories" class="footer__link">Accessories</a>
+        </nav>
+
+        <!-- Company -->
+        <nav aria-label="Company links">
+          <p class="footer__col-title">Company</p>
+          <a href="about.html" class="footer__link">Our Story</a>
+          <a href="about.html#sustainability" class="footer__link">Sustainability</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+          <a href="contact.html#press" class="footer__link">Press</a>
+        </nav>
+
+        <!-- Help -->
+        <nav aria-label="Help links">
+          <p class="footer__col-title">Help</p>
+          <a href="#" class="footer__link">Sizing Guide</a>
+          <a href="#" class="footer__link">Shipping & Returns</a>
+          <a href="#" class="footer__link">Care Instructions</a>
+          <a href="#" class="footer__link">FAQ</a>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Newport Custom. All rights reserved.</p>
+        <nav class="footer__legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CART DRAWER
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+
+  <aside
+    class="cart-drawer"
+    id="cart-drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Shopping cart"
+    aria-hidden="true"
+  >
+    <div class="cart-drawer__header">
+      <h2 class="cart-drawer__title">Your Bag</h2>
+      <button class="cart-drawer__close" id="cart-close" aria-label="Close cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="cart-drawer__body" id="cart-body">
+      <!-- Populated by cart.js -->
+    </div>
+
+    <div class="cart-drawer__footer" id="cart-footer" style="display:none;">
+      <div class="cart-subtotal">
+        <span class="cart-subtotal__label">Subtotal</span>
+        <span class="cart-subtotal__value" id="cart-subtotal">$0</span>
+      </div>
+      <button
+        class="btn btn--dark cart-checkout-btn"
+        id="checkout-btn"
+        aria-label="Proceed to checkout"
+      >
+        Checkout
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <p class="cart-note">
+        Free shipping on orders over $200 &nbsp;·&nbsp; Secure checkout via Stripe
+      </p>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SCRIPTS
+       Order: Lenis → GSAP → ScrollTrigger → app JS
+  ═══════════════════════════════════════════════════════════ -->
+
+  <!-- Lenis smooth scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <!-- GSAP core + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- App scripts (deferred, non-blocking) -->
+  <script src="js/cart.js"       defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/main.js"       defer></script>
+
+</body>
+</html>

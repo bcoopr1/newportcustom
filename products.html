@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collection — Newport Custom</title>
+  <meta name="description" content="Shop the Newport Custom collection — elevated linen shirts, silk slip dresses, tailored trousers and refined accessories for coastal living." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Collection — Newport Custom" />
+  <meta property="og:description" content="Elevated essentials for coastal living. Shop linen, silk, and natural-fibre clothing." />
+  <meta property="og:image"       content="/images/og-products.webp" />
+  <meta property="og:url"         content="https://newportcustom.com/products.html" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="canonical" href="https://newportcustom.com/products.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+
+  <style>
+    /* Page-specific styles */
+    .products-hero {
+      padding-top: calc(var(--nav-height) + clamp(3rem, 6vw, 5rem));
+      padding-bottom: clamp(2rem, 4vw, 3.5rem);
+      background: var(--c-cream);
+    }
+
+    .products-hero h1 {
+      margin-bottom: var(--space-3);
+    }
+
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+      padding-block: var(--space-6);
+      border-bottom: 1px solid var(--c-border);
+      margin-bottom: var(--space-10);
+    }
+
+    .filter-label {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--c-text-muted);
+      margin-right: var(--space-2);
+    }
+
+    .filter-btn {
+      padding: 0.4rem 0.875rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--c-border);
+      border-radius: 100px;
+      color: var(--c-text-muted);
+      background: transparent;
+      transition: all var(--dur-fast) ease;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--c-text);
+      color: var(--c-white);
+      border-color: var(--c-text);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header role="banner">
+    <nav class="nav nav--scrolled" id="nav" aria-label="Main navigation">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo" aria-label="Newport Custom — Home">Newport Custom</a>
+          <ul class="nav__links" role="list">
+            <li><a href="index.html"    class="nav__link">Home</a></li>
+            <li><a href="products.html" class="nav__link active" aria-current="page">Collection</a></li>
+            <li><a href="about.html"    class="nav__link">About</a></li>
+            <li><a href="contact.html"  class="nav__link">Contact</a></li>
+          </ul>
+          <div class="nav__actions">
+            <button class="nav__cart-btn" id="cart-toggle" aria-label="Open cart, 0 items" aria-expanded="false" aria-controls="cart-drawer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+              Bag
+              <span class="nav__cart-count" id="cart-count" aria-live="polite">0</span>
+            </button>
+            <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="nav__mobile" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="index.html"    class="nav__mobile-link">Home</a>
+      <a href="products.html" class="nav__mobile-link">Collection</a>
+      <a href="about.html"    class="nav__mobile-link">About</a>
+      <a href="contact.html"  class="nav__mobile-link">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Page header -->
+    <section class="products-hero" aria-label="Products header">
+      <div class="container">
+        <span class="label" style="display:block;margin-bottom:var(--space-3);">SS 2026</span>
+        <h1>The Collection</h1>
+        <p style="font-size:1.0625rem;max-width:55ch;">
+          Natural fibres, considered silhouettes — crafted for the ease of
+          coastal California living.
+        </p>
+      </div>
+    </section>
+
+    <!-- Collection grid -->
+    <section class="section section--white" aria-labelledby="collection-heading">
+      <h2 id="collection-heading" class="sr-only">All products</h2>
+      <div class="container">
+        <!-- Filter bar -->
+        <div class="filter-bar" role="group" aria-label="Filter by category">
+          <span class="filter-label">Filter:</span>
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="tops">Tops</button>
+          <button class="filter-btn" data-filter="bottoms">Bottoms</button>
+          <button class="filter-btn" data-filter="dresses">Dresses</button>
+          <button class="filter-btn" data-filter="outerwear">Outerwear</button>
+          <button class="filter-btn" data-filter="accessories">Accessories</button>
+        </div>
+
+        <!-- Rendered by main.js from products.json -->
+        <div class="products-grid" id="products-grid" aria-label="Products"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <p class="footer__brand-name">Newport Custom</p>
+          <p class="footer__brand-desc">Coastal fine clothing, handfinished in Newport Beach, California.</p>
+        </div>
+        <nav aria-label="Shop links">
+          <p class="footer__col-title">Shop</p>
+          <a href="products.html" class="footer__link">New Arrivals</a>
+          <a href="products.html?category=tops" class="footer__link">Tops</a>
+          <a href="products.html?category=bottoms" class="footer__link">Bottoms</a>
+          <a href="products.html?category=dresses" class="footer__link">Dresses</a>
+        </nav>
+        <nav aria-label="Company links">
+          <p class="footer__col-title">Company</p>
+          <a href="about.html" class="footer__link">Our Story</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </nav>
+        <nav aria-label="Help links">
+          <p class="footer__col-title">Help</p>
+          <a href="#" class="footer__link">Sizing Guide</a>
+          <a href="#" class="footer__link">Shipping & Returns</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Newport Custom. All rights reserved.</p>
+        <nav class="footer__legal" aria-label="Legal links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-drawer__header">
+      <h2 class="cart-drawer__title">Your Bag</h2>
+      <button class="cart-drawer__close" id="cart-close" aria-label="Close cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-drawer__body" id="cart-body"></div>
+    <div class="cart-drawer__footer" id="cart-footer" style="display:none;">
+      <div class="cart-subtotal">
+        <span class="cart-subtotal__label">Subtotal</span>
+        <span class="cart-subtotal__value" id="cart-subtotal">$0</span>
+      </div>
+      <button class="btn btn--dark cart-checkout-btn" id="checkout-btn" aria-label="Proceed to checkout">
+        Checkout
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <p class="cart-note">Free shipping on orders over $200 &nbsp;·&nbsp; Secure checkout via Stripe</p>
+    </div>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/cart.js"            defer></script>
+  <script src="js/stripe-checkout.js" defer></script>
+  <script src="js/animations.js"      defer></script>
+  <script src="js/main.js"            defer></script>
+</body>
+</html>
