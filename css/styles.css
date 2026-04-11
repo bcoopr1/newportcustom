@@ -299,6 +299,38 @@ p {
   transform: scale(1.4);
 }
 
+/* Overlay nav — sits on top of a dark hero, text starts white */
+.nav--overlay .nav__logo,
+.nav--overlay .nav__link,
+.nav--overlay .nav__cart-btn {
+  color: var(--c-white);
+}
+.nav--overlay .nav__link::after {
+  background: var(--c-white);
+}
+.nav--overlay .nav__cart-btn {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.nav--overlay .nav__hamburger span {
+  background: var(--c-white);
+}
+
+/* Once scrolled, always switch back to dark text regardless of overlay */
+.nav--overlay.nav--scrolled .nav__logo,
+.nav--overlay.nav--scrolled .nav__link,
+.nav--overlay.nav--scrolled .nav__cart-btn {
+  color: var(--c-text);
+}
+.nav--overlay.nav--scrolled .nav__link::after {
+  background: var(--c-text);
+}
+.nav--overlay.nav--scrolled .nav__cart-btn {
+  border-color: var(--c-border);
+}
+.nav--overlay.nav--scrolled .nav__hamburger span {
+  background: var(--c-text);
+}
+
 /* Mobile hamburger */
 .nav__hamburger {
   display: none;
