@@ -26,46 +26,7 @@
     "category": "bottoms"
   },
   {
-    "id": "silk-slip-003",
-    "name": "Catalina Silk Slip Dress",
-    "price": 340,
-    "description": "Cut on the bias from 22mm silk charmeuse, the Catalina drapes with liquid precision. A deep V-back and adjustable straps let it move from morning to evening effortlessly.",
-    "images": [
-      "images/silk-slip-1.webp",
-      "images/silk-slip-2.webp"
-    ],
-    "sizes": ["XS", "S", "M", "L"],
-    "in_stock": true,
-    "category": "dresses"
-  },
-  {
-    "id": "cotton-blazer-004",
-    "name": "Harbor Cotton Blazer",
-    "price": 395,
-    "description": "A single-button blazer in deadstock Italian cotton canvas — structured at the shoulder, relaxed at the hem. Unlined for breathability, precise where it counts.",
-    "images": [
-      "images/cotton-blazer-1.webp",
-      "images/cotton-blazer-2.webp"
-    ],
-    "sizes": ["XS", "S", "M", "L", "XL"],
-    "in_stock": true,
-    "category": "outerwear"
-  },
-  {
-    "id": "knit-top-005",
-    "name": "Dune Ribbed Knit Top",
-    "price": 145,
-    "description": "A slim-fit ribbed top in a soft cotton-cashmere blend. The elongated hem and subtle stretch make it a seamless layering piece across all seasons.",
-    "images": [
-      "images/knit-top-1.webp",
-      "images/knit-top-2.webp"
-    ],
-    "sizes": ["XS", "S", "M", "L", "XL"],
-    "in_stock": true,
-    "category": "tops"
-  },
-  {
-    "id": "wide-belt-006",
+    "id": "wide-belt-003",
     "name": "Cove Leather Belt",
     "price": 115,
     "description": "Hand-stitched in full-grain vegetable-tanned leather. A wide 4cm profile with a minimal matte brass buckle — the detail that completes the look.",
@@ -74,6 +35,32 @@
       "images/leather-belt-2.webp"
     ],
     "sizes": ["S/M", "M/L"],
+    "in_stock": true,
+    "category": "accessories"
+  },
+  {
+    "id": "wallet-004",
+    "name": "Marina Slim Wallet",
+    "price": 95,
+    "description": "A pared-back bifold in vegetable-tanned full-grain leather. Six card slots, a bill compartment, and a profile slim enough to disappear into any pocket. Ages beautifully with use.",
+    "images": [
+      "images/wallet-1.webp",
+      "images/wallet-2.webp"
+    ],
+    "sizes": ["One Size"],
+    "in_stock": true,
+    "category": "accessories"
+  },
+  {
+    "id": "clutch-005",
+    "name": "Shoreline Clutch",
+    "price": 175,
+    "description": "Structured yet soft, the Shoreline Clutch is cut from the same vegetable-tanned leather as our belt and wallet. A fold-over closure, interior card pocket, and detachable wrist strap — effortless from beach to dinner.",
+    "images": [
+      "images/clutch-1.webp",
+      "images/clutch-2.webp"
+    ],
+    "sizes": ["One Size"],
     "in_stock": true,
     "category": "accessories"
   }
