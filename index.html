@@ -289,23 +289,35 @@
       "
       aria-label="Campaign feature"
     >
-      <!-- Parallax bg -->
+      <!-- Background video -->
       <div
-        id="feature-bg"
         style="
           position: absolute;
-          inset: -25%;
+          inset: 0;
           z-index: 0;
+          overflow: hidden;
         "
       >
-        <img
-          src="images/feature-bg.webp"
-          alt=""
-          role="presentation"
-          loading="lazy"
-          id="feature-parallax-img"
-          style="width:100%;height:100%;object-fit:cover;opacity:0.55;will-change:transform;"
-        />
+        <video
+          id="campaign-video"
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+          style="
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.55;
+          "
+        >
+          <!-- Drop your video into /images/ and update the filename below.
+               Provide both .webm (smaller) and .mp4 (fallback) if you have both. -->
+          <source src="images/campaign.webm" type="video/webm" />
+          <source src="images/campaign.mp4"  type="video/mp4" />
+        </video>
       </div>
 
       <div class="container" style="position:relative;z-index:1;text-align:center;">

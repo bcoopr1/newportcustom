@@ -105,7 +105,6 @@
     const editorialImages = [
       { id: 'editorial-parallax-1', yPercent: 16 },
       { id: 'editorial-parallax-2', yPercent: 16 },
-      { id: 'feature-parallax-img', yPercent: 14 },
     ];
 
     editorialImages.forEach(({ id, yPercent }) => {
