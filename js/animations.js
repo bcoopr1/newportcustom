@@ -80,23 +80,8 @@
   }
 
   // ── Hero parallax ─────────────────────────────────────────────────────────
-  function initHeroParallax() {
-    if (prefersReducedMotion) return;
-
-    const heroImg = document.getElementById('hero-parallax-img');
-    if (!heroImg) return;
-
-    gsap.to(heroImg, {
-      yPercent: 22,   // moves 22% of its height as user scrolls — subtle
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '.hero',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: true,
-      },
-    });
-  }
+  // Video background — parallax removed (video fills the hero natively).
+  function initHeroParallax() {}
 
   // ── Editorial section parallax ────────────────────────────────────────────
   function initEditorialParallax() {
