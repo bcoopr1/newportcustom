@@ -363,9 +363,7 @@ p {
 
 .hero__bg {
   position: absolute;
-  inset: -20%;  /* extra space for parallax travel */
-  top: -20%;
-  bottom: -20%;
+  inset: 0;
   z-index: 0;
 }
 

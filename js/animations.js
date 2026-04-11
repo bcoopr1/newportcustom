@@ -79,9 +79,15 @@
     });
   }
 
-  // ── Hero parallax ─────────────────────────────────────────────────────────
-  // Video background — parallax removed (video fills the hero natively).
-  function initHeroParallax() {}
+  // ── Hero video autoplay ───────────────────────────────────────────────────
+  // Programmatic play() handles browsers that silently block the autoplay attr.
+  function initHeroParallax() {
+    const video = document.getElementById('hero-video');
+    if (!video) return;
+    video.play().catch(() => {
+      // Autoplay blocked — video stays paused until user interacts. That's fine.
+    });
+  }
 
   // ── Editorial section parallax ────────────────────────────────────────────
   function initEditorialParallax() {
